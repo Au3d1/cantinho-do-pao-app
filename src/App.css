@@ -1,0 +1,223 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f1ea; /* Cor de fundo amigável (pão) */
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #df691b; 
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+}
+
+.search-input {
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border: 3px solid #d35400;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(46, 45, 45, 0.05);
+}
+
+.instrucao, .not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-left: 6px solid #e67e22;
+}
+
+.product-info h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.categoria-tag {
+  background-color: #ecf0f1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.product-details {
+  text-align: right;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.unit {
+  font-size: 1.2rem;
+  color: #95a5a6;
+}
+
+.location {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  background-color: #fdf2e9;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-img {
+  max-width: 150px; /* Ajuste este valor para deixar a logo maior ou menor */
+  height: auto;
+  border-radius: 50%; /* Opcional: deixa a logo redonda, se ela for quadrada */
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.header, .search-box, .categories-container {
+  flex-shrink: 0; 
+}
+
+.results-container {
+  flex: 1;
+  overflow-y: auto; 
+  padding-right: 10px; /* Dá um respiro para a barra de rolagem não grudar na tela */
+}
+
+.results-container::-webkit-scrollbar {
+  width: 8px;
+}
+.results-container::-webkit-scrollbar-thumb {
+  background-color: #d35400;
+  border-radius: 10px;
+}
+
+.admin-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 1rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.form-group input, .form-group select {
+  padding: 0.8rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-salvar {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #219653;
+}
+
+.mensagem-alerta {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
