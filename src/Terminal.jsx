@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import logoCantinho from './assets/logo.png';
+import { Link } from 'react-router-dom';
 function Terminal() {
   const [busca, setBusca] = useState('');
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas');
@@ -33,6 +34,9 @@ function Terminal() {
         <div className="logo-container">
           <img src={logoCantinho} alt="Logo Cantinho do Pão" className="logo-img" />
           <h1>Cantinho do Pão</h1>
+          <Link to="/admin" style={{ textDecoration: 'none', color: '#ccc' }}>
+          ⚙️ Painel
+          </Link>
         </div>
         <p>Terminal de Consulta Rápida</p>
       </header>
