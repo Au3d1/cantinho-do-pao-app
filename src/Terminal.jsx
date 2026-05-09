@@ -10,7 +10,7 @@ function Terminal() {
 
   // 2. useEffect vai na API buscar os dados assim que a tela abre
   useEffect(() => {
-    fetch('http://localhost:5000/api/produtos')
+    fetch('https://cantinho-do-pao-app.onrender.com/api/produtos')
       .then((resposta) => resposta.json())
       .then((dados) => {
         setProdutos(dados); // Guarda os produtos que vieram do MongoDB

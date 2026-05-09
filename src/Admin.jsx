@@ -20,7 +20,7 @@ function Admin() {
     e.preventDefault(); // Evita que a página recarregue
 
     try {
-      const resposta = await fetch('http://localhost:5000/api/produtos', {
+      const resposta = await fetch('https://cantinho-do-pao-app.onrender.com/api/produtos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(produto)

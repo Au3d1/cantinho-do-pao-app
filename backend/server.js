@@ -15,21 +15,19 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Conectado ao MongoDB!'))
   .catch(err => console.error('Erro ao conectar ao MongoDB:', err));
 
-// ==========================================
-// ROTAS DA API
-// ==========================================
 
-// Rota GET: Retorna todos os produtos do banco de dados
+
+
 app.get('/api/produtos', async (req, res) => {
   try {
-    const produtos = await Produto.find(); // Busca tudo no MongoDB
-    res.json(produtos); // Envia para o React
+    const produtos = await Produto.find(); 
+    res.json(produtos); // Envia a lista de produtos como resposta
   } catch (error) {
     res.status(500).json({ erro: 'Erro ao buscar produtos' });
   }
 });
 
-// Rota POST: Adiciona um novo produto no banco de dados
+
 app.post('/api/produtos', async (req, res) => {
   try {
     const novoProduto = new Produto(req.body);
