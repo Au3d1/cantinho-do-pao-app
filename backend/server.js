@@ -23,6 +23,7 @@ app.get('/api/produtos', async (req, res) => {
     const produtos = await Produto.find(); 
     res.json(produtos); // Envia a lista de produtos como resposta
   } catch (error) {
+    console.log("erro do banco de dados:", error);
     res.status(500).json({ erro: 'Erro ao buscar produtos' });
   }
 });
