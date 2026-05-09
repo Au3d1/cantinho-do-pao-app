@@ -1,18 +1,17 @@
-// src/App.jsx
-import Terminal from './Terminal';
-import Admin from './Admin';
+import { Routes, Route } from 'react-router-dom';
+import Terminal from './Terminal'; // O nome do seu arquivo do caixa
+import Admin from './Admin';       // O nome do seu arquivo do painel
 
 function App() {
-  // Lê a URL que está no navegador
-  const caminhoAtual = window.location.pathname;
-
-  // Se a URL terminar em "/admin", mostra a tela de gerência
-  if (caminhoAtual === '/admin') {
-    return <Admin />;
-  }
-
-  // Se não (qualquer outra coisa), mostra o terminal limpo do cliente
-  return <Terminal />;
+  return (
+    <Routes>
+      {/* Rota principal: Quando acessar /, abre o caixa */}
+      <Route path="/" element={<Terminal />} />
+      
+      {/* Rota do painel: Quando acessar /admin, abre o admin */}
+      <Route path="/admin" element={<Admin />} />
+    </Routes>
+  );
 }
 
 export default App;

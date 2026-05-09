@@ -35,7 +35,7 @@ function Terminal() {
           <img src={logoCantinho} alt="Logo Cantinho do Pão" className="logo-img" />
           <h1>Cantinho do Pão</h1>
           <Link to="/admin" style={{ textDecoration: 'none', color: '#ccc' }}>
-          ⚙️ Painel
+          ⚙️
           </Link>
         </div>
         <p>Terminal de Consulta Rápida</p>
